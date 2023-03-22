@@ -29,11 +29,13 @@ for i in formato:
         st.session_state[i['name']] = i['value']
     
 if 'venta' in st.session_state.tiponegocio.lower():
-    filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_venta_bogota'
+    filename                = 'data/data_market_venta_bogota'
+    #filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_venta_bogota'
     st.session_state.vardep = 'valorventa'
 
 if 'arriendo' in st.session_state.tiponegocio.lower():
-    filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_arriendo_bogota'
+    filename                = 'data/data_market_arriendo_bogota'
+    #filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_arriendo_bogota'
     st.session_state.vardep = 'valorarriendo'
     
 data    = getdatamarketcoddir(filename)
@@ -160,11 +162,13 @@ def onchange():
 def tiponegocio_change():
         
     if 'venta' in st.session_state.tiponegocio.lower():
-        filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_venta_bogota'
+        filename                = 'data/data_market_venta_bogota'
+        #filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_venta_bogota'
         st.session_state.vardep = 'valorventa'
     
     if 'arriendo' in st.session_state.tiponegocio.lower():
-        filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_arriendo_bogota'
+        filename                = 'data/data_market_arriendo_bogota'
+        #filename                = r'D:\Dropbox\Empresa\proyecto-data-property\data\data_market_arriendo_bogota'
         st.session_state.vardep = 'valorarriendo'
         
     data                           = getdatamarketcoddir(filename)

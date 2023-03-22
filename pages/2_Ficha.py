@@ -57,11 +57,13 @@ if idcodigo=='' or tiponegocio=='':
 
 if idcodigo!='' and any([x for x in ['venta','arriendo'] if x in tiponegocio.lower()]):
     if 'venta' in tiponegocio.lower():
-        filename  = r'D:\Dropbox\Empresa\Buydepa\COLOMBIA\DESARROLLO\proyecto-opensource-buydepa\data\data_market_venta_bogota'
+        filename  = 'data/data_market_venta_bogota'
+        #filename  = r'D:\Dropbox\Empresa\Buydepa\COLOMBIA\DESARROLLO\proyecto-opensource-buydepa\data\data_market_venta_bogota'
         vardep    = 'valorventa'
     
     if 'arriendo' in tiponegocio.lower():
-        filename  = r'D:\Dropbox\Empresa\Buydepa\COLOMBIA\DESARROLLO\proyecto-opensource-buydepa\data\data_market_arriendo_bogota'
+        filename  = 'data/data_market_arriendo_bogota'
+        #filename  = r'D:\Dropbox\Empresa\Buydepa\COLOMBIA\DESARROLLO\proyecto-opensource-buydepa\data\data_market_arriendo_bogota'
         vardep    = 'valorarriendo'
 
     data = getdatamarketcoddir(filename)
