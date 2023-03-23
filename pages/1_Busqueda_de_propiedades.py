@@ -254,7 +254,7 @@ with col1:
         for i, inmueble in st.session_state.data_market.iterrows():
             if isinstance(inmueble['imagen_principal'], str) and len(inmueble['imagen_principal'])>20: imagen_principal =  inmueble['imagen_principal']
             else: imagen_principal = "https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/sin_imagen.png"
-            url_export     = f"http://localhost:8501/Ficha?idcodigo={inmueble['code']}&tiponegocio={st.session_state.tiponegocio}"
+            url_export     = f"https://agavirja-proyecto-data-property-home-rtjiaw.streamlit.app/Ficha?idcodigo={inmueble['code']}&tiponegocio={st.session_state.tiponegocio}"
             
             if pd.isnull(inmueble['direccion']): direccionlabel = ''
             else: direccionlabel = f'''<b> Direccion: {inmueble['direccion']}</b><br>'''
@@ -458,7 +458,7 @@ if st.session_state.data_market.empty is False:
         if isinstance(inmueble['imagen_principal'], str) and len(inmueble['imagen_principal'])>20: imagen_principal =  inmueble['imagen_principal']
         else: imagen_principal = "https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/sin_imagen.png"
         caracteristicas = f'<strong>{inmueble["areaconstruida"]}</strong> mt<sup>2</sup> | <strong>{int(inmueble["habitaciones"])}</strong> hab | <strong>{int(inmueble["banos"])}</strong> baños | <strong>{int(inmueble["garajes"])}</strong> pq'
-        url_export      = f"http://localhost:8501/Ficha?idcodigo={inmueble['code']}&tiponegocio={st.session_state.tiponegocio}"
+        url_export      = f"https://agavirja-proyecto-data-property-home-rtjiaw.streamlit.app/Ficha?idcodigo={inmueble['code']}&tiponegocio={st.session_state.tiponegocio}"
         
         if pd.isnull(inmueble['direccion']): direccionlabel = '<p class="caracteristicas-info">&nbsp</p>'
         else: direccionlabel = f'''<p class="caracteristicas-info">Dirección: {inmueble['direccion'][0:35]}</p>'''
